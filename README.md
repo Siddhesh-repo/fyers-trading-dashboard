@@ -295,8 +295,6 @@ python3 -m pytest
 
 ## Screenshots
 
-> *Add application screenshots to `docs/screenshots/` to display preview images on GitHub.*
-
 | Screen | Preview |
 | :--- | :--- |
 | **System Overview** | ![Dashboard Overview](docs/screenshots/dashboard.png) |
