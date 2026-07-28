@@ -12,11 +12,11 @@ import {
 
 export const Sidebar = ({ activeTab = 'dashboard', onTabChange = () => {} }) => {
   const navItems = [
-    { id: 'dashboard', label: 'System Overview', icon: LayoutDashboard, badge: 'Stage 1' },
-    { id: 'market', label: 'Market Data', icon: BarChart2, badge: 'Stage 3' },
-    { id: 'marketwatch', label: 'Live Stream', icon: Radio, badge: 'Stage 5' },
-    { id: 'portfolio', label: 'Portfolio & Funds', icon: Briefcase, badge: 'Stage 4' },
-    { id: 'orders', label: 'Order Book', icon: ListOrdered, badge: 'Stage 4' },
+    { id: 'dashboard', label: 'System Overview', icon: LayoutDashboard },
+    { id: 'market', label: 'Market Data', icon: BarChart2 },
+    { id: 'marketwatch', label: 'Live Stream', icon: Radio },
+    { id: 'portfolio', label: 'Portfolio & Funds', icon: Briefcase },
+    { id: 'orders', label: 'Order Book', icon: ListOrdered },
     { id: 'analytics', label: 'Analytics', icon: PieChart, disabled: true },
     { id: 'settings', label: 'Settings', icon: Sliders, disabled: true },
   ];
@@ -50,11 +50,6 @@ export const Sidebar = ({ activeTab = 'dashboard', onTabChange = () => {} }) => 
                 <span>{item.label}</span>
               </div>
 
-              {item.badge && (
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-                  {item.badge}
-                </span>
-              )}
               {item.disabled && (
                 <span className="text-[9px] uppercase px-1.5 py-0.5 rounded bg-slate-800 text-slate-500 border border-slate-700">
                   Soon
@@ -69,14 +64,14 @@ export const Sidebar = ({ activeTab = 'dashboard', onTabChange = () => {} }) => 
       <div className="p-4 m-4 rounded-xl bg-[#0B0E14] border border-[#232936] space-y-2">
         <div className="flex items-center space-x-2 text-xs text-slate-300 font-semibold">
           <Server className="w-3.5 h-3.5 text-emerald-400" />
-          <span>FastAPI Backend</span>
+          <span>FYERS Trading Gateway</span>
         </div>
         <p className="text-[11px] text-slate-400 leading-relaxed">
-          Modular clean architecture setup with Pydantic configuration & CORS.
+          Production Architecture with FastAPI, WebSockets &amp; OAuth 2.0.
         </p>
         <div className="pt-1 flex items-center justify-between text-[10px] text-slate-500 border-t border-[#232936]">
-          <span>REST API: v1</span>
-          <span className="text-emerald-400 font-mono">200 OK</span>
+          <span>API Router: v1</span>
+          <span className="text-emerald-400 font-mono">Connected</span>
         </div>
       </div>
     </aside>
